@@ -20,7 +20,7 @@ const EPBanner = () => {
             — NEW MIXTAPE ALERT!
           </p>
           <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold">
-            5IVE PARTY MIX— <br className="hidden md:inline" />DJ Tunez & Amexin
+            5IVE PARTY MIX— <br className="hidden md:inline" />DJ NTY
           </h2>
           <button className="bg-orange-600 text-white font-bold py-3 px-10 rounded-full shadow-lg hover:bg-orange-500 transition-colors duration-300 mt-4">
             Listen Now

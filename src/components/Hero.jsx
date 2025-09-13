@@ -13,7 +13,7 @@ const App = () => {
         {/* Mobile / md background */}
         <div
           className="absolute inset-0 bg-cover bg-center block lg:hidden"
-          style={{ backgroundImage: `url(${praying})` }}
+          style={{ backgroundImage: `url(${urban2set})` }}
           aria-hidden="true"
         />
 

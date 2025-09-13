@@ -3,6 +3,7 @@ import hero from "../assets/hero.png";
 import urbanhero from "../assets/urbanhero.jpg";
 import logo from "../assets/logo.png";
 import urban2set from "../assets/urban2set.jpg";
+import praying from '../assets/praying.jpg'
 
 const App = () => {
   return (
@@ -12,7 +13,7 @@ const App = () => {
         {/* Mobile / md background */}
         <div
           className="absolute inset-0 bg-cover bg-center block lg:hidden"
-          style={{ backgroundImage: `url(${urban2set})` }}
+          style={{ backgroundImage: `url(${praying})` }}
           aria-hidden="true"
         />
 

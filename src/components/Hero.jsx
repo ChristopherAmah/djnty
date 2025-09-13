@@ -41,9 +41,9 @@ const App = () => {
           </div>
 
           {/* Headline */}
-          <h1 className="text-3xl md:text-5xl font-extrabold leading-tight animate-slideUp text-orange-400 drop-shadow-md">
+          {/* <h1 className="text-3xl md:text-5xl font-extrabold leading-tight animate-slideUp text-orange-400 drop-shadow-md">
             Feel The Vibes. <br /> Own The Night.
-          </h1>
+          </h1> */}
 
           {/* Buttons */}
           <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-6 items-center md:items-start">

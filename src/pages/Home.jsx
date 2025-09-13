@@ -2,6 +2,7 @@ import React from 'react'
 import TopBanner from '../components/TopBanner'
 import Hero from '../components/Hero'
 import Banner from '../components/Banner'
+import NewMusic from '../components/NewMusic'
 
 
 const Home = () => {
@@ -10,6 +11,7 @@ const Home = () => {
         <TopBanner />
         <Hero />
         <Banner />
+        <NewMusic />
     </>
   )
 }

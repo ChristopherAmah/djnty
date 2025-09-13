@@ -1,30 +1,40 @@
-import React from 'react';
-import hero from '../assets/hero.png';
-import logo from '../assets/logo.png';
+import React from "react";
+import hero from "../assets/hero.png";
+import urbanhero from "../assets/urbanhero.jpg";
+import logo from "../assets/logo.png";
+import urban2set from "../assets/urban2set.jpg";
 
 const App = () => {
   return (
     <div className="bg-gray-100 min-h-screen">
       {/* Hero Section */}
-      <div
-        className="relative h-screen bg-cover bg-center flex items-center justify-center text-white p-6"
-        style={{ backgroundImage: `url(${hero})` }}
-      >
+      <div className="relative h-screen flex items-center justify-center text-white p-6 overflow-hidden">
+        {/* Mobile / md background */}
+        <div
+          className="absolute inset-0 bg-cover bg-center block lg:hidden"
+          style={{ backgroundImage: `url(${urban2set})` }}
+          aria-hidden="true"
+        />
+
+        {/* Large-screen background (swaps in at lg and above) */}
+        <div
+          className="absolute inset-0 bg-cover bg-center hidden lg:block"
+          style={{ backgroundImage: `url(${urbanhero})` }}
+          aria-hidden="true"
+        />
+
         {/* Gradient Overlay */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/80"></div>
 
         {/* Floating Glow Behind Logo */}
-        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-72 h-72 bg-orange-500 rounded-full opacity-20 blur-3xl animate-pulse"></div>
+        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-72 h-72 bg-orange-500 rounded-full opacity-20 blur-3xl animate-pulse" />
 
         {/* Hero Content */}
         <div className="relative z-10 flex flex-col items-center text-center space-y-6 md:space-y-8 max-w-3xl animate-fadeIn">
           {/* Logo & Tagline */}
           <div className="flex flex-col items-center">
-            {/* <img
-              src={logo}
-              alt="Logo"
-              className="w-32 md:w-44 drop-shadow-lg animate-float"
-            /> */}
+            {/* Uncomment if you want the logo */}
+            {/* <img src={logo} alt="Logo" className="w-32 md:w-44 drop-shadow-lg animate-float" /> */}
             <span className="text-xl md:text-2xl font-light mt-3 tracking-wide text-gray-200 animate-slideUp">
               🎶 DJ – Artiste – Producer 🎶
             </span>

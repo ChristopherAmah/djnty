@@ -7,7 +7,7 @@ const Banner = () => {
     <div className="bg-orange-600 px-6 py-4 sm:px-12 sm:py-6 lg:px-24 lg:py-8 shadow-md">
       {/* Banner Row */}
       <div className="flex justify-between items-center">
-        <h1 className="text-sm sm:text-2xl md:text-3xl font-medium text-white tracking-wide">
+        <h1 className="text-md sm:text-2xl md:text-3xl font-medium text-white tracking-wide">
           🎶 NEW MUSIC OUT NOW!
         </h1>
         <button

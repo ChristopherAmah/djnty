@@ -2,7 +2,7 @@ import React from 'react';
 
 const Topbar = () => {
   return (
-    <div className="bg-gradient-to-r from-orange-500 to-red-500 text-white font-sans">
+    <div className="bg-gradient-to-r from-orange-500 to-red-500 text-white font-sans hidden">
       <div className="container mx-auto flex justify-between items-center px-4 py-1">
         {/* Announcement text */}
         <span className="font-semibold text-xs md:text-sm tracking-wider uppercase">

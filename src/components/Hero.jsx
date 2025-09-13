@@ -36,7 +36,7 @@ const App = () => {
             {/* Uncomment if you want the logo */}
             {/* <img src={logo} alt="Logo" className="w-32 md:w-44 drop-shadow-lg animate-float" /> */}
             <span className="text-xl md:text-2xl font-light mt-3 tracking-wide text-gray-200 animate-slideUp">
-              🎶 DJ – Artiste – Producer 🎶
+              🎶 DJ – Artiste 🎶
             </span>
           </div>
 

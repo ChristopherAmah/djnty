@@ -6,11 +6,20 @@ const MixesBanner = () => {
       href="https://open.spotify.com/playlist/your-mixes-link" // replace with your actual link
       target="_blank"
       rel="noopener noreferrer"
-      className="block w-full bg-gray-900 text-gray-100 text-center py-3 px-4 shadow-md hover:bg-gray-800 transition-colors"
+      className="relative block w-full overflow-hidden"
     >
-      <p className="text-base md:text-lg font-medium tracking-wide">
-        New Mixes Out Now
-      </p>
+      {/* Background with blur + subtle gradient */}
+      <div className="absolute inset-0 backdrop-blur-md bg-gradient-to-r from-black/60 via-gray-900/50 to-black/60 border-y border-white/10" />
+
+      {/* Content */}
+      <div className="relative text-center py-4 px-6 z-10">
+        <p className="text-lg md:text-xl font-semibold tracking-wide text-orange-400">
+          🎧 New Mixes Out Now – Tap to Listen
+        </p>
+      </div>
+
+      {/* Glow accent */}
+      <div className="absolute inset-0 bg-gradient-to-r from-orange-400/10 via-transparent to-orange-400/10 animate-pulse" />
     </a>
   );
 };

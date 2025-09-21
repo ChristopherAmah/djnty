@@ -22,7 +22,7 @@ const Navbar = () => {
 
       {/* Fullscreen Mobile Menu */}
       <div
-        className={`fixed inset-0 z-50 bg-black text-white flex flex-col items-center justify-center transform transition-transform duration-300 ease-in-out ${
+        className={`fixed inset-0 z-50 backdrop-blur-md bg-black/50 text-white flex flex-col items-center justify-center transform transition-transform duration-300 ease-in-out ${
           isOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >

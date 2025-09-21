@@ -1,6 +1,7 @@
 // Navbar.js
 import React, { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa"; // npm install react-icons
+import { HiMenuAlt2 } from "react-icons/hi";
 import logo from "../assets/logo.png";
 
 const Navbar = () => {
@@ -15,7 +16,7 @@ const Navbar = () => {
 
         {/* Right: Hamburger */}
         <button onClick={() => setIsOpen(true)}>
-          <FaBars size={24} />
+          <HiMenuAlt2 size={24} />
         </button>
       </div>
 
@@ -53,7 +54,7 @@ const Navbar = () => {
 
         {/* Center logo */}
         <div className="py-2 md:py-0">
-          <img src={logo} alt="Your Logo" className="h-12" />
+          <img src={logo} alt="NTY Logo" className="h-12" />
         </div>
 
         {/* Right-side links */}

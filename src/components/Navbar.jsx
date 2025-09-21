@@ -38,7 +38,6 @@ const Navbar = () => {
         <div className="flex flex-col space-y-8 text-2xl font-semibold uppercase">
           <a href="#" onClick={() => setIsOpen(false)}>Music</a>
           <a href="https://nevtooyoung.com" onClick={() => setIsOpen(false)}>Shop</a>
-          <a href="#" onClick={() => setIsOpen(false)}>Shop</a>
           <a href="#" onClick={() => setIsOpen(false)}>Events</a>
           <a href="#" onClick={() => setIsOpen(false)}>Gallery</a>
           <a href="#" onClick={() => setIsOpen(false)}>About</a>

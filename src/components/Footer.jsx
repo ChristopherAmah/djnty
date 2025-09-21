@@ -6,8 +6,9 @@ import {
   FaInstagram,
   FaChevronUp,
 } from "react-icons/fa";
-import logo from "../assets/logo.png";
+import logo from "../assets/logobg.png";
 import dmw from '../assets/dmw.jpg'
+import dmwbg from '../assets/dmwbg.png'
 
 const Footer = () => {
   const [showScrollTop, setShowScrollTop] = useState(false);
@@ -37,7 +38,7 @@ const Footer = () => {
           {/* Logos side by side */}
           <div className="flex items-center justify-center space-x-6">
             <img src={logo} alt="Logo 1" className="h-12 w-auto" />
-            <img src={dmw} alt="Logo 2" className="h-12 w-auto" />
+            <img src={dmwbg} alt="Logo 2" className="h-12 w-auto" />
           </div>
 
           {/* Social Media */}

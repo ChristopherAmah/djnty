@@ -37,7 +37,7 @@ const Navbar = () => {
         {/* Links */}
         <div className="flex flex-col space-y-8 text-2xl font-semibold uppercase">
           <a href="#" onClick={() => setIsOpen(false)}>Music</a>
-          <a href="#" onClick={() => setIsOpen(false)}>Shop</a>
+          <a href="https://nevtooyoung.com" onClick={() => setIsOpen(false)}>Shop</a>
           <a href="#" onClick={() => setIsOpen(false)}>Events</a>
           <a href="#" onClick={() => setIsOpen(false)}>Gallery</a>
           <a href="#" onClick={() => setIsOpen(false)}>About</a>
@@ -49,7 +49,7 @@ const Navbar = () => {
       <div className="hidden md:flex justify-center items-center flex-wrap md:flex-nowrap space-x-8">
         {/* Left-side links */}
         <a href="#" className="uppercase text-base whitespace-nowrap">Music</a>
-        <a href="#" className="uppercase text-base whitespace-nowrap">Shop</a>
+        <a href="https://nevtooyoung.com" className="uppercase text-base whitespace-nowrap">Shop</a>
         <a href="#" className="uppercase text-base whitespace-nowrap">Events</a>
 
         {/* Center logo */}

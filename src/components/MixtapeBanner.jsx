@@ -27,9 +27,9 @@ const EPBanner = () => {
             5IVE PARTY MIX <br className="hidden md:inline" /> DJ NTY
           </h2>
 
-          <button className="relative mt-6 py-3 px-10 rounded-full font-bold text-lg bg-gradient-to-r from-orange-500 via-red-500 to-pink-500 shadow-xl hover:scale-105 transition-transform duration-300">
-            <span className="relative z-10">🎧 Listen Now</span>
-            <span className="absolute inset-0 rounded-full bg-gradient-to-r from-orange-500 via-red-500 to-pink-500 opacity-75 blur-lg animate-pulse"></span>
+          {/* Button with blur styling */}
+          <button className="px-10 py-4 bg-transparent border border-white/40 text-white text-lg font-medium rounded-full hover:bg-white hover:text-black transition-all transform hover:scale-105 backdrop-blur-sm">
+            🎧 Listen Now
           </button>
         </div>
       </div>

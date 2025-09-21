@@ -1,53 +1,146 @@
 import React, { useState } from "react";
 
-const Banner = () => {
-  const [showPlayer, setShowPlayer] = useState(false);
+const MusicBanner = () => {
+  const [isOpen, setIsOpen] = useState(false); // mobile popup state
+  const [isVisible, setIsVisible] = useState(true); // desktop visibility
+  const [activeTab, setActiveTab] = useState("spotify"); // active player
+
+  if (!isVisible) return null;
+
+  const renderPlayer = () => {
+    if (activeTab === "spotify") {
+      return (
+        <iframe
+          style={{ borderRadius: "12px" }}
+          src="https://open.spotify.com/embed/track/6Xvog0WSh2IWLCBNipFuJN?utm_source=generator"
+          width="100%"
+          height="152"
+          frameBorder="0"
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+          loading="lazy"
+          title="Spotify Player"
+          className="overflow-hidden"
+        ></iframe>
+      );
+    } else {
+      return (
+        <iframe
+          allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write"
+          frameBorder="0"
+          height="175"
+          style={{
+            width: "100%",
+            maxWidth: "660px",
+            overflow: "hidden",
+            background: "transparent",
+            borderRadius: "12px",
+          }}
+          sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
+          src="https://embed.music.apple.com/us/album/track-id"
+          title="Apple Music Player"
+        ></iframe>
+      );
+    }
+  };
 
   return (
-    <div className="bg-orange-600 px-6 py-4 sm:px-12 sm:py-6 lg:px-24 lg:py-8 shadow-md">
-      {/* Banner Row */}
-      <div className="flex justify-between items-center">
-        <h1 className="text-md sm:text-2xl md:text-3xl font-medium text-white tracking-wide">
-          🎶 NEW MUSIC OUT NOW!
-        </h1>
+    <>
+      {/* Mobile: floating NEW MUSIC pill */}
+      <div className="md:hidden fixed bottom-4 inset-x-0 flex justify-center z-50">
         <button
-          onClick={() => setShowPlayer(!showPlayer)}
-          className="bg-white text-orange-600 font-medium text-sm lg:text-[16px] py-2 px-6 sm:py-3 sm:px-8 rounded-full shadow-lg hover:bg-gray-100 transition-colors duration-300"
+          onClick={() => setIsOpen(true)}
+          className="flex items-center gap-2 bg-red-500 text-white text-sm font-bold px-4 py-2 rounded-full shadow-lg hover:bg-red-600 transition animate-pulse"
         >
-          {showPlayer ? "HIDE" : "LISTEN"}
+          🎵 NEW MUSIC
         </button>
       </div>
 
-      {/* Spotify Embed */}
-      {showPlayer && (
-        <div className="mt-6 animate-fadeIn">
-          <iframe
-            data-testid="embed-iframe"
-            style={{ borderRadius: "12px" }}
-            src="https://open.spotify.com/embed/track/6Xvog0WSh2IWLCBNipFuJN?utm_source=generator"
-            width="100%"
-            height="352"
-            frameBorder="0"
-            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-            loading="lazy"
-          ></iframe>
+      {/* Mobile: Fullscreen popup */}
+      {isOpen && (
+        <div className="md:hidden fixed inset-0 bg-black bg-opacity-95 z-50 flex flex-col items-center animate-slide-down">
+          {/* Close Button */}
+          <button
+            onClick={() => setIsOpen(false)}
+            className="absolute top-4 right-4 text-gray-300 hover:text-white text-xl"
+          >
+            ✖
+          </button>
+
+          {/* Tabs */}
+          <div className="flex gap-4 mt-10 mb-4">
+            <button
+              onClick={() => setActiveTab("spotify")}
+              className={`px-4 py-2 rounded-full text-sm font-semibold transition ${
+                activeTab === "spotify"
+                  ? "bg-green-500 text-white"
+                  : "bg-gray-800 text-gray-300 hover:bg-gray-700"
+              }`}
+            >
+              Spotify
+            </button>
+            <button
+              onClick={() => setActiveTab("apple")}
+              className={`px-4 py-2 rounded-full text-sm font-semibold transition ${
+                activeTab === "apple"
+                  ? "bg-pink-500 text-white"
+                  : "bg-gray-800 text-gray-300 hover:bg-gray-700"
+              }`}
+            >
+              Apple Music
+            </button>
+          </div>
+
+          {/* Player */}
+          <div className="w-11/12 max-w-md">{renderPlayer()}</div>
         </div>
       )}
-    </div>
+
+      {/* Desktop floating card */}
+      <div
+        className="
+          hidden md:block
+          fixed bottom-6 right-6 z-50
+          bg-black text-white rounded-2xl shadow-xl p-4
+          w-96 animate-slide-up
+        "
+      >
+        {/* Close Button */}
+        <button
+          onClick={() => setIsVisible(false)}
+          className="absolute top-2 right-2 text-gray-400 hover:text-white transition"
+        >
+          ✖
+        </button>
+
+        {/* Tabs */}
+        <div className="flex gap-3 mb-3">
+          <button
+            onClick={() => setActiveTab("spotify")}
+            className={`px-3 py-1 rounded-full text-xs font-semibold transition ${
+              activeTab === "spotify"
+                ? "bg-green-500 text-white"
+                : "bg-gray-800 text-gray-300 hover:bg-gray-700"
+            }`}
+          >
+            Spotify
+          </button>
+          <button
+            onClick={() => setActiveTab("apple")}
+            className={`px-3 py-1 rounded-full text-xs font-semibold transition ${
+              activeTab === "apple"
+                ? "bg-pink-500 text-white"
+                : "bg-gray-800 text-gray-300 hover:bg-gray-700"
+            }`}
+          >
+            Apple Music
+          </button>
+        </div>
+
+        {/* Player */}
+        {renderPlayer()}
+      </div>
+    </>
   );
 };
 
-export default Banner;
-
-/* Add this animation in global.css or tailwind.config if using custom animations */
-<style>
-{`
-  @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-  .animate-fadeIn {
-    animation: fadeIn 0.4s ease-out forwards;
-  }
-`}
-</style>
+export default MusicBanner;

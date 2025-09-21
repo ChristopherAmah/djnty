@@ -36,7 +36,7 @@ const MusicBanner = () => {
             borderRadius: "12px",
           }}
           sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
-          src="https://embed.music.apple.com/us/album/track-id"
+          src="https://embed.music.apple.com/ng/album/loupiano-single/1829243414"
           title="Apple Music Player"
         ></iframe>
       );

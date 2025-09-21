@@ -18,8 +18,8 @@ const EPBanner = () => {
           />
         </div>
 
-        {/* Text and Button Section */}
-        <div className="flex flex-col items-center md:items-start text-center md:text-left space-y-6">
+        {/* Text and Embed Section */}
+        <div className="flex flex-col items-center md:items-start text-center md:text-left space-y-6 w-full md:w-1/2">
           <p className="text-orange-400 text-lg font-semibold tracking-widest animate-pulse">
             — NEW MIXTAPE ALERT!
           </p>
@@ -27,10 +27,19 @@ const EPBanner = () => {
             5IVE PARTY MIX <br className="hidden md:inline" /> DJ NTY
           </h2>
 
-          {/* Button with blur styling */}
-          <button className="px-10 py-4 bg-transparent border border-white/40 text-white text-lg font-medium rounded-full hover:bg-white hover:text-black transition-all transform hover:scale-105 backdrop-blur-sm">
-            🎧 Listen Now
-          </button>
+          {/* Embedded Audiomack Player */}
+          <div className="w-full">
+            <iframe
+              src="https://audiomack.com//embed/djnty/song/5ive-party-mix-2"
+              scrolling="no"
+              width="100%"
+              height="252"
+              frameBorder="0"
+              allow="autoplay; clipboard-write"
+              title="5IVE PARTY MIX"
+              className="rounded-xl shadow-lg"
+            ></iframe>
+          </div>
         </div>
       </div>
     </div>

@@ -3,7 +3,7 @@ import React from "react";
 const MixesBanner = () => {
   return (
     <a
-      href="https://open.spotify.com/playlist/your-mixes-link" // replace with your actual link
+      href="https://audiomack.com/djnty/song/5ive-party-mix-2" // replace with your actual link
       target="_blank"
       rel="noopener noreferrer"
       className="relative block w-full overflow-hidden"

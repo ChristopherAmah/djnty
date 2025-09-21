@@ -11,7 +11,7 @@ const Home = () => {
     <>
         <TopBanner />
         <Hero />
-        <Banner />
+        {/* <Banner /> */}
         <NewMusic />
         <MixtapeBanner />
     </>

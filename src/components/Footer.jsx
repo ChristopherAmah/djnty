@@ -2,10 +2,12 @@ import React, { useState, useEffect } from "react";
 import {
   FaTwitter,
   FaYoutube,
+  FaTiktok,
   FaSpotify,
   FaInstagram,
   FaChevronUp,
 } from "react-icons/fa";
+import { SiApplemusic } from "react-icons/si";
 import logo from "../assets/logobg.png";
 import dmw from '../assets/dmw.jpg'
 import dmwbg from '../assets/dmwbg.png'
@@ -44,10 +46,12 @@ const Footer = () => {
           {/* Social Media */}
           <div className="flex space-x-6 text-xl">
             {[
-              { href: "https://twitter.com", icon: <FaTwitter /> },
-              { href: "https://youtube.com", icon: <FaYoutube /> },
+              { href: "https://x.com/dj_nty", icon: <FaTwitter /> },
+              { href: "https://www.youtube.com/@djnty", icon: <FaYoutube /> },
+              { href: "https://tiktok.com/@dj_nty", icon: <FaTiktok  /> },
               { href: "https://spotify.com", icon: <FaSpotify /> },
-              { href: "https://instagram.com", icon: <FaInstagram /> },
+              { href: "https://music.apple.com/ng/artist/dj-nty/1829243415", icon: <SiApplemusic /> },
+              { href: "https://instagram.com/dj_nty", icon: <FaInstagram /> },
             ].map((item, index) => (
               <a
                 key={index}

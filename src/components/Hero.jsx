@@ -22,7 +22,7 @@ const Hero = () => {
       {/* Hero Content */}
       <div className="relative z-10 h-full flex flex-col justify-center items-center text-center px-6">
         {/* Tagline */}
-        <span className="text-lg font-bold md:text-base tracking-widest uppercase text-orange-400 mb-8 animate-fadeIn">
+        <span className="text-2xl font-bold md:text-base tracking-widest uppercase text-orange-400 mb-8 animate-fadeIn">
           DJ NTY - URBAN FUSION
         </span>
 

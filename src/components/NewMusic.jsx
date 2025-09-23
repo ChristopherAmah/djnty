@@ -25,7 +25,7 @@ const NewMusic = () => {
       <div className="container mx-auto relative z-10 text-center">
         {/* Section title */}
         <h2 className="text-3xl sm:text-4xl font-sans md:text-5xl font-light tracking-widest uppercase mb-12 text-orange-400">
-          Music Section
+          Music
         </h2>
 
         {/* Album cover with floating icons (desktop) */}

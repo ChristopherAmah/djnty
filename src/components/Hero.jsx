@@ -29,13 +29,13 @@ const Hero = () => {
         <div className="flex flex-col md:flex-row gap-5">
           <a
             href="#dj-mixes"
-            className="px-10 py-4 bg-gradient-to-r from-orange-500 via-pink-500 to-red-500 text-white text-lg font-bold rounded-full shadow-lg hover:shadow-pink-500/50 transition-all transform hover:scale-105"
+            className="px-10 py-4 font-sans bg-gradient-to-r from-orange-500 via-pink-500 to-red-500 text-white text-lg font-bold rounded-full shadow-lg hover:shadow-pink-500/50 transition-all transform hover:scale-105"
           >
             🎧 Listen Now
           </a>
           <a
             href="#tour-dates"
-            className="px-10 py-4 bg-transparent border border-white/40 text-white text-lg font-medium rounded-full hover:bg-white hover:text-black transition-all transform hover:scale-105 backdrop-blur-sm"
+            className="px-10 py-4 font-sans bg-transparent border border-white/40 text-white text-lg font-medium rounded-full hover:bg-white hover:text-black transition-all transform hover:scale-105 backdrop-blur-sm"
           >
             📅 Event Dates
           </a>

@@ -4,7 +4,7 @@ import loupiano from "../assets/loupiano.png";
 
 const NewMusic = () => {
   const newMusicData = {
-    title: "Loupiano",
+    title: "LOUPIANO",
     artists: "Kobilou, DJ NTY",
     albumCovers: [loupiano],
     links: {
@@ -24,7 +24,7 @@ const NewMusic = () => {
 
       <div className="container mx-auto relative z-10 text-center">
         {/* Section title */}
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-light tracking-widest uppercase mb-12 text-orange-400">
+        <h2 className="text-3xl sm:text-4xl font-sans md:text-5xl font-light tracking-widest uppercase mb-12 text-orange-400">
           Music Section
         </h2>
 
@@ -61,10 +61,10 @@ const NewMusic = () => {
 
         {/* Music info */}
         <div className="mt-10">
-          <h3 className="text-3xl sm:text-4xl font-semibold tracking-wide text-orange-400">
+          <h3 className="text-3xl sm:text-4xl font-sans font-semibold tracking-wide text-orange-400">
             {newMusicData.title}
           </h3>
-          <p className="mt-2 text-lg sm:text-xl opacity-70">
+          <p className="mt-2 text-lg sm:text-xl font-sans opacity-70">
             {newMusicData.artists}
           </p>
         </div>

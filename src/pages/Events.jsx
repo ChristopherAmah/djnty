@@ -1,8 +1,7 @@
 import React from 'react'
+import EventSection from '../components/EventSection'
 
-
-
-const Home = () => {
+const Events = () => {
   return (
     <>
         <EventSection />
@@ -10,4 +9,4 @@ const Home = () => {
   )
 }
 
-export default Home
+export default Events

@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa"; // npm install react-icons
 import { HiMenuAlt2 } from "react-icons/hi";
 import logo from "../assets/logo.png";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,7 +13,9 @@ const Navbar = () => {
       {/* Mobile Layout */}
       <div className="flex justify-between items-center md:hidden">
         {/* Left: Logo */}
-        <img src={logo} alt="Logo" className="h-8" />
+        <Link to="/" className="flex items-center">
+          <img src={logo} alt="Logo" className="h-8" />
+        </Link>
 
         {/* Right: Hamburger */}
         <button onClick={() => setIsOpen(true)}>
@@ -36,12 +39,42 @@ const Navbar = () => {
 
         {/* Links */}
         <div className="flex flex-col space-y-8 text-2xl font-semibold uppercase">
-          <a href="#" onClick={() => setIsOpen(false)}>Music</a>
+          <Link 
+            to="/music"
+            onClick={() => setIsOpen(false)} 
+            className="hover:text-orange-400 transition"
+          >
+            Music
+          </Link>
           <a href="https://nevtooyoung.com" onClick={() => setIsOpen(false)}>Shop</a>
-          <a href="#" onClick={() => setIsOpen(false)}>Events</a>
-          <a href="#" onClick={() => setIsOpen(false)}>Gallery</a>
-          <a href="#" onClick={() => setIsOpen(false)}>About</a>
-          <a href="#" onClick={() => setIsOpen(false)}>Contact</a>
+          <Link 
+            to="/events" 
+            onClick={() => setIsOpen(false)} 
+            className="hover:text-orange-400 transition"
+          >
+            Events
+          </Link>
+          <Link 
+            to="/gallery"
+            onClick={() => setIsOpen(false)} 
+            className="hover:text-orange-400 transition"
+          >
+            Gallery
+          </Link>
+          <Link 
+            to="/about" 
+            onClick={() => setIsOpen(false)} 
+            className="hover:text-orange-400 transition"
+          >
+            About
+          </Link>
+          <Link 
+            to="/contact" 
+            onClick={() => setIsOpen(false)} 
+            className="hover:text-orange-400 transition"
+          >
+            Contact
+          </Link>
         </div>
       </div>
 

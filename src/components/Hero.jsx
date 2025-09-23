@@ -1,6 +1,7 @@
 import React from "react";
 import urbanhero from "../assets/urbanhero.jpg"; // desktop bg
 import urban2set from "../assets/urban2set.jpg"; // mobile bg
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
@@ -33,12 +34,12 @@ const Hero = () => {
           >
             🎧 Listen Now
           </a>
-          <a
-            href="#tour-dates"
+          <Link
+            to="/events"
             className="px-10 py-4 font-sans bg-transparent border border-white/40 text-white text-lg font-medium rounded-full hover:bg-white hover:text-black transition-all transform hover:scale-105 backdrop-blur-sm"
           >
             📅 Event Dates
-          </a>
+          </Link>
         </div>
       </div>
 

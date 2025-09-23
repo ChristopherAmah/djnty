@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "title": "Urban Rave",
+    "date": "2025-08-29",
+    "image": "/events/fusion2.jpg",
+    "ticketLink": "https://myevents.com/summer-party"
+  },
+  {
+    "id": 2,
+    "title": "Urban Fusion",
+    "date": "2025-06-28",
+    "image": "/events/fusion1.jpg",
+    "ticketLink": "https://myevents.com/beach-festival"
+  }
+]

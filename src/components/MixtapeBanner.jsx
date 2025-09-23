@@ -24,7 +24,7 @@ const EPBanner = () => {
             — NEW MIXTAPE ALERT!
           </p>
           <h2 className="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight bg-gradient-to-r from-orange-400 via-pink-500 to-red-500 bg-clip-text text-transparent animate-text-shine">
-            5IVE PARTY MIX <br className="hidden md:inline" /> DJ NTY
+            DJ NTY <br className="hidden md:inline" /> 5IVE PARTY MIX
           </h2>
 
           {/* Embedded Audiomack Player */}

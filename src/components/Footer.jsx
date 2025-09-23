@@ -8,6 +8,7 @@ import {
   FaChevronUp,
 } from "react-icons/fa";
 import { SiApplemusic } from "react-icons/si";
+import { BsTwitterX } from "react-icons/bs";
 import logo from "../assets/logobg.png";
 import dmw from '../assets/dmw.jpg'
 import dmwbg from '../assets/dmwbg.png'
@@ -44,9 +45,9 @@ const Footer = () => {
           </div>
 
           {/* Social Media */}
-          <div className="flex space-x-6 text-xl">
+          <div className="flex space-x-6 text-xl px-1">
             {[
-              { href: "https://x.com/dj_nty", icon: <FaTwitter /> },
+              { href: "https://x.com/dj_nty", icon: <BsTwitterX /> },
               { href: "https://www.youtube.com/@djnty", icon: <FaYoutube /> },
               { href: "https://tiktok.com/@dj_nty", icon: <FaTiktok  /> },
               { href: "https://spotify.com", icon: <FaSpotify /> },

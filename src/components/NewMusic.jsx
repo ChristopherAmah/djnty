@@ -16,7 +16,7 @@ const NewMusic = () => {
   };
 
   return (
-    <div className="relative bg-black text-white py-20 px-6 overflow-hidden">
+    <div className="relative bg-black text-white py-20 px-6 overflow-hidden" id="music">
       {/* Background glow */}
       <div className="absolute inset-0 bg-gradient-to-b from-black via-gray-900 to-black" />
       <div className="absolute -top-40 -left-40 w-96 h-96 bg-orange-400/10 rounded-full blur-[120px]" />

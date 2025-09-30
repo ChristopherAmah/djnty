@@ -16,61 +16,68 @@ const NewMusic = () => {
   };
 
   return (
-    <div className="relative bg-black text-white py-20 px-6 overflow-hidden" id="music">
+    <div
+      className="relative bg-black text-white py-20 px-6 overflow-hidden"
+      id="music"
+    >
       {/* Background glow */}
       <div className="absolute inset-0 bg-gradient-to-b from-black via-gray-900 to-black" />
       <div className="absolute -top-40 -left-40 w-96 h-96 bg-orange-400/10 rounded-full blur-[120px]" />
       <div className="absolute -bottom-40 -right-40 w-96 h-96 bg-orange-400/10 rounded-full blur-[120px]" />
 
-      <div className="container mx-auto relative z-10 text-center">
+      <div className="container mx-auto relative z-10">
         {/* Section title */}
-        <h2 className="text-3xl sm:text-4xl font-sans md:text-5xl font-light tracking-widest uppercase mb-12 text-orange-400">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-sans font-bold tracking-widest uppercase mb-16 text-center text-orange-400">
           Music
         </h2>
 
-        {/* Album cover with floating icons (desktop) */}
-        <div className="relative flex justify-center items-center">
-          <div className="relative w-64 sm:w-72 lg:w-80 rounded-2xl overflow-hidden shadow-2xl transform hover:scale-105 transition duration-500">
-            <img
-              src={newMusicData.albumCovers[0]}
-              alt="Album Cover"
-              className="w-full h-full object-cover"
-            />
+        {/* Responsive layout */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-12">
+          {/* Album cover */}
+          <div className="flex justify-center">
+            <div className="relative w-64 sm:w-72 lg:w-96 rounded-2xl overflow-hidden shadow-2xl transform hover:scale-105 hover:shadow-orange-500/30 transition duration-500">
+              <img
+                src={newMusicData.albumCovers[0]}
+                alt="Album Cover"
+                className="w-full h-full object-cover"
+              />
+            </div>
+          </div>
 
-            {/* Floating icons (desktop only) */}
-            <div className="hidden sm:flex absolute inset-0 items-center justify-center gap-8">
+          {/* Music info + buttons */}
+          <div className="text-center lg:text-left space-y-6">
+            <h3 className="text-4xl md:text-5xl font-extrabold text-orange-400 drop-shadow-lg">
+              {newMusicData.title}
+            </h3>
+            <p className="text-lg md:text-xl opacity-80 font-light">
+              {newMusicData.artists}
+            </p>
+
+            <div className="flex justify-center lg:justify-start gap-6 mt-6">
               <a
                 href={newMusicData.links.spotify}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-14 h-14 flex items-center justify-center bg-black/40 backdrop-blur-md rounded-full border border-white/30 hover:scale-110 hover:text-orange-400 transition"
+                className="flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-green-500 to-green-700 text-white font-medium shadow-lg hover:shadow-green-500/40 transform hover:scale-110 transition"
               >
-                <FaSpotify size={26} />
+                <FaSpotify size={22} />
+                Spotify
               </a>
               <a
                 href={newMusicData.links.apple}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-14 h-14 flex items-center justify-center bg-black/40 backdrop-blur-md rounded-full border border-white/30 hover:scale-110 hover:text-orange-400 transition"
+                className="flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-gray-200 to-gray-400 text-black font-medium shadow-lg hover:shadow-white/40 transform hover:scale-110 transition"
               >
-                <FaApple size={26} />
+                <FaApple size={22} />
+                Apple Music
               </a>
             </div>
           </div>
         </div>
 
-        {/* Music info */}
-        <div className="mt-10">
-          <h3 className="text-3xl sm:text-4xl font-sans font-semibold tracking-wide text-orange-400">
-            {newMusicData.title}
-          </h3>
-          <p className="mt-2 text-lg sm:text-xl font-sans opacity-70">
-            {newMusicData.artists}
-          </p>
-        </div>
-
         {/* Glass bar for mobile (icons only) */}
-        <div className="mt-6 sm:hidden flex justify-center">
+        <div className="mt-10 sm:hidden flex justify-center">
           <div className="flex items-center gap-8 px-6 py-3 bg-black/40 backdrop-blur-md rounded-full border border-white/20">
             <a
               href={newMusicData.links.spotify}

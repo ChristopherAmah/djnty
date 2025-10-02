@@ -24,16 +24,16 @@ const Hero = () => {
         
         {/* Tagline in its own contrast box */}
         <div className="px-6 py-4 rounded-xl shadow-lg backdrop-blur-sm">
-          <h1 className="text-3xl md:text-5xl font-extrabold text-white tracking-wide drop-shadow-md">
-            Feel the <span className="text-orange-400">Urban Vibe</span>
+          <h1 className="text-xl md:text-3xl font-extrabold text-white tracking-wide drop-shadow-md">
+            DJ NTY - <span className="text-orange-400">URBAN FUSION</span>
           </h1>
-          <p className="text-gray-100 max-w-2xl mt-3 text-sm md:text-lg">
+          {/* <p className="text-gray-100 max-w-2xl mt-3 text-sm md:text-lg">
             Discover mixtapes, music and events by <span className="font-semibold text-orange-400">DJ NTY</span>
-          </p>
+          </p> */}
         </div>
 
         {/* CTA Buttons */}
-        <div className="flex flex-col md:flex-row gap-6 mt-6">
+        <div className="flex flex-col md:flex-row gap-6 mt-2">
           {/* <a
             href="#dj-mixes"
             className="px-12 py-4 font-sans bg-gradient-to-r from-orange-500 via-pink-500 to-red-500 

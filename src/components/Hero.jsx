@@ -28,20 +28,20 @@ const Hero = () => {
             Feel the <span className="text-orange-400">Urban Vibe</span>
           </h1>
           <p className="text-gray-100 max-w-2xl mt-3 text-sm md:text-lg">
-            Discover mixes, events, and the culture that keeps the rhythm alive 🎶
+            Discover mixtapes, music and events by <span className="font-semibold text-orange-400">DJ NTY</span>
           </p>
         </div>
 
         {/* CTA Buttons */}
         <div className="flex flex-col md:flex-row gap-6 mt-6">
-          <a
+          {/* <a
             href="#dj-mixes"
             className="px-12 py-4 font-sans bg-gradient-to-r from-orange-500 via-pink-500 to-red-500 
               text-white text-lg md:text-xl font-bold rounded-full shadow-lg 
               hover:shadow-pink-500/50 transition-all transform hover:scale-110"
           >
             🎧 Listen Now
-          </a>
+          </a> */}
           <Link
             to="/events"
             className="px-12 py-4 font-sans border border-white/60 text-white text-lg md:text-xl font-medium 

@@ -24,7 +24,7 @@ const Hero = () => {
         
         {/* Tagline in its own contrast box */}
         <div className="px-6 py-4 rounded-xl shadow-lg backdrop-blur-sm">
-          <h1 className="text-2xl md:text-4xl lg:text-8xl font-extrabold text-white tracking-wide drop-shadow-md blaka-regular">
+          <h1 className="text-3xl md:text-4xl lg:text-8xl font-extrabold text-white tracking-wide drop-shadow-md blaka-regular">
             DJ NTY - <span className="text-orange-400">URBAN FUSION</span>
           </h1>
           <p className="text-gray-100 mt-5 text-sm md:text-lg text-center">

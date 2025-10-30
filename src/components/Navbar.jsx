@@ -83,12 +83,14 @@ const Navbar = () => {
         {/* Left-side links */}
         <a href="#music" className="uppercase text-base whitespace-nowrap">Music</a>
         <a href="https://nevtooyoung.com" className="uppercase text-base whitespace-nowrap">Shop</a>
-        <a href="#" className="uppercase text-base whitespace-nowrap">Events</a>
+        <Link to="/events" className="uppercase text-base whitespace-nowrap">Events</Link>
 
         {/* Center logo */}
+        <Link to="/">
         <div className="py-2 md:py-0">
           <img src={logo} alt="NTY Logo" className="h-12" />
         </div>
+        </Link>
 
         {/* Right-side links */}
         <a href="#" className="uppercase text-base whitespace-nowrap">Gallery</a>

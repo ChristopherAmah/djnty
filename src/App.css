@@ -5,3 +5,9 @@
   .animate-fadeIn {
     animation: fadeIn 0.3s ease-out forwards;
   }
+
+.blaka-regular {
+  font-family: "Blaka", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}

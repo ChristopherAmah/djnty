@@ -38,28 +38,28 @@ const Navbar = () => {
         </button>
 
         {/* Links */}
-        <div className="flex flex-col space-y-8 text-md font-semibold uppercase">
+        <div className="flex flex-col space-y-8 text-sm font-semibold">
           <a 
             href="#music" 
             onClick={() => setIsOpen(false)} 
             className="hover:text-orange-400 transition"
           >
-            Music
+            MUSIC
           </a>
-          <a href="https://nevtooyoung.com" onClick={() => setIsOpen(false)}>Shop</a>
+          <a href="https://nevtooyoung.com" onClick={() => setIsOpen(false)}>SHOP</a>
           <Link 
             to="/events" 
             onClick={() => setIsOpen(false)} 
             className="hover:text-orange-400 transition"
           >
-            Events
+            EVENTS
           </Link>
           <Link 
             to="/gallery"
             onClick={() => setIsOpen(false)} 
             className="hover:text-orange-400 transition"
           >
-            Gallery
+            GALLERY
           </Link>
           {/* <Link 
             to="/about" 
@@ -68,22 +68,22 @@ const Navbar = () => {
           >
             About
           </Link> */}
-          <Link 
-            to="/contact" 
+          <a 
+            href="#contact" 
             onClick={() => setIsOpen(false)} 
             className="hover:text-orange-400 transition"
           >
-            Contact
-          </Link>
+            CONTACT
+          </a>
         </div>
       </div>
 
       {/* Desktop Layout */}
       <div className="hidden md:flex justify-center items-center flex-wrap md:flex-nowrap space-x-8">
         {/* Left-side links */}
-        <a href="#music" className="uppercase text-base whitespace-nowrap">Music</a>
-        <a href="https://nevtooyoung.com" className="uppercase text-base whitespace-nowrap">Shop</a>
-        <Link to="/events" className="uppercase text-base whitespace-nowrap">Events</Link>
+        <a href="#music" className="text-sm whitespace-nowrap">MUSIC</a>
+        <a href="https://nevtooyoung.com" className="text-sm whitespace-nowrap">SHOP</a>
+        <Link to="/events" className="text-sm whitespace-nowrap">EVENTS</Link>
 
         {/* Center logo */}
         <Link to="/">
@@ -93,9 +93,9 @@ const Navbar = () => {
         </Link>
 
         {/* Right-side links */}
-        <a href="#" className="uppercase text-base whitespace-nowrap">Gallery</a>
+        <Link to="/gallery" className="text-sm whitespace-nowrap">GALLERY</Link>
         {/* <a href="#" className="uppercase text-base whitespace-nowrap">About</a> */}
-        <a href="#" className="uppercase text-base whitespace-nowrap">Contact</a>
+        <a href="#contact" className="text-sm whitespace-nowrap">CONTACT</a>
       </div>
     </nav>
   );

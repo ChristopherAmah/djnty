@@ -6,6 +6,7 @@ import './App.css'
 import Topbar from './components/Topbar'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
+import Gallery from './components/Gallery'
 
 function App() {
 
@@ -17,6 +18,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/events' element={<Events />} />
+        <Route path='/gallery' element={<Gallery />} />
       </Routes>
       <Footer />
     </div>

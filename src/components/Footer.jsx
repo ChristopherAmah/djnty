@@ -31,7 +31,7 @@ const Footer = () => {
   return (
     <div className="flex flex-col justify-between">
       {/* Footer */}
-      <footer className="relative bg-[#3d3b3b] text-white py-12 px-6 font-sans overflow-hidden animate-fadeIn">
+      <footer className="relative bg-[#3d3b3b] text-white py-12 px-6 font-sans overflow-hidden animate-fadeIn" id="contact">
         {/* Soft glowing background */}
         {/* <div className="absolute inset-0 bg-gradient-to-t from-black via-gray-900 to-black" />
         <div className="absolute -top-40 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-orange-400/10 rounded-full blur-[150px]" /> */}
@@ -70,9 +70,10 @@ const Footer = () => {
           <div className="w-full h-px bg-white/10" />
 
           {/* Copyright */}
-          <p className="text-gray-400 text-sm">
-            &copy; {new Date().getFullYear()} DJ NTY. All rights reserved.
-          </p>
+          <div className="flex justify-between items-center w-full text-gray-400 text-sm md:px-20">
+            <p>&copy; {new Date().getFullYear()} DJ NTY. All rights reserved.</p>
+            <p>Made by <a href="https://christopheramahportfolio.vercel.app/" target="_blank" rel="noopener noreferrer" className="hover:text-orange-400 transition">AMAH</a></p>
+          </div>
         </div>
       </footer>
 

@@ -6,8 +6,67 @@
     animation: fadeIn 0.3s ease-out forwards;
   }
 
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-slideUp {
+  animation: slideUp 0.5s ease-out forwards;
+}
+
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-50px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+.animate-slideInLeft {
+  animation: slideInLeft 0.6s ease-out forwards;
+}
+
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(50px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+.animate-slideInRight {
+  animation: slideInRight 0.6s ease-out forwards;
+}
+
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.8); }
+  to { opacity: 1; transform: scale(1); }
+}
+.animate-scaleIn {
+  animation: scaleIn 0.4s ease-out forwards;
+}
+
 .blaka-regular {
   font-family: "Blaka", system-ui;
   font-weight: 400;
   font-style: normal;
+}
+
+.stone-background {
+  background-color: #3d3b3b;
+}
+/* Full-site grain/noise overlay */
+body::before {
+  content: "";
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='256' height='256' viewBox='0 0 256 256'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.95' numOctaves='6' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect x='0' y='0' width='256' height='256' filter='url(%23noise)'/%3E%3C/svg%3E");
+  background-size: cover;
+  opacity: 0.65;
+  mix-blend-mode: multiply;
+}
+
+#root, .stone-background {
+  position: relative;
+  z-index: 0;
+}
+
+html, body {
+  min-height: 100%;
 }

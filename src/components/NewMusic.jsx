@@ -6,6 +6,7 @@ const NewMusic = () => {
   const newMusicData = {
     title: "LOUPIANO",
     artists: "Kobilou, DJ NTY",
+    description: "A vibrant fusion of Afrobeat rhythms and electronic beats, perfect for your playlist.",
     albumCovers: [loupiano],
     links: {
       spotify:
@@ -16,8 +17,9 @@ const NewMusic = () => {
   };
 
   return (
-    <div
-      className="relative bg-black text-white py-20 px-6 overflow-hidden"
+    <section className="">
+      <div
+      className="relative bg-black text-white py-20 px-6 overflow-hidden animate-fadeIn"
       id="music"
     >
       {/* Background glow */}
@@ -27,7 +29,7 @@ const NewMusic = () => {
 
       <div className="container mx-auto relative z-10">
         {/* Section title */}
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-sans font-bold tracking-widest uppercase mb-16 text-center text-orange-400">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-sans font-bold tracking-widest uppercase mb-16 text-center text-orange-400 animate-slideUp">
           Music
         </h2>
 
@@ -35,7 +37,7 @@ const NewMusic = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-12">
           {/* Album cover */}
           <div className="flex justify-center">
-            <div className="relative w-64 sm:w-72 lg:w-96 rounded-2xl overflow-hidden shadow-2xl transform hover:scale-105 hover:shadow-orange-500/30 transition duration-500">
+            <div className="relative w-64 sm:w-72 lg:w-96 rounded-2xl overflow-hidden shadow-2xl transform hover:scale-105 hover:rotate-2 hover:shadow-orange-500/30 transition duration-500 animate-scaleIn">
               <img
                 src={newMusicData.albumCovers[0]}
                 alt="Album Cover"
@@ -45,15 +47,21 @@ const NewMusic = () => {
           </div>
 
           {/* Music info + buttons */}
-          <div className="text-center lg:text-left space-y-6">
+          <div className="text-center lg:text-left space-y-6 animate-slideInRight">
+            <div className="inline-block px-4 py-2 bg-orange-400 text-black font-bold text-sm uppercase rounded-full mb-4">
+              New Release
+            </div>
             <h3 className="text-4xl md:text-5xl font-extrabold text-orange-400 drop-shadow-lg">
               {newMusicData.title}
             </h3>
             <p className="text-lg md:text-xl opacity-80 font-light">
               {newMusicData.artists}
             </p>
+            <p className="text-base md:text-lg opacity-70 font-light italic">
+              {newMusicData.description}
+            </p>
 
-            <div className="flex justify-center lg:justify-start gap-6 mt-6">
+            {/* <div className="flex justify-center lg:justify-start gap-6 mt-6">
               <a
                 href={newMusicData.links.spotify}
                 target="_blank"
@@ -72,7 +80,7 @@ const NewMusic = () => {
                 <FaApple size={22} />
                 Apple Music
               </a>
-            </div>
+            </div> */}
           </div>
         </div>
 
@@ -99,6 +107,7 @@ const NewMusic = () => {
         </div>
       </div>
     </div>
+    </section>
   );
 };
 

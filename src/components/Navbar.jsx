@@ -2,14 +2,14 @@
 import React, { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa"; // npm install react-icons
 import { HiMenuAlt2 } from "react-icons/hi";
-import logo from "../assets/logo.png";
+import logo from "../assets/logobg.png";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="bg-black text-white p-4">
+    <nav className="bg-[#3d3b3b] text-white p-4">
       {/* Mobile Layout */}
       <div className="flex justify-between items-center md:hidden">
         {/* Left: Logo */}
@@ -38,7 +38,7 @@ const Navbar = () => {
         </button>
 
         {/* Links */}
-        <div className="flex flex-col space-y-8 text-2xl font-semibold uppercase">
+        <div className="flex flex-col space-y-8 text-md font-semibold uppercase">
           <a 
             href="#music" 
             onClick={() => setIsOpen(false)} 
@@ -61,13 +61,13 @@ const Navbar = () => {
           >
             Gallery
           </Link>
-          <Link 
+          {/* <Link 
             to="/about" 
             onClick={() => setIsOpen(false)} 
             className="hover:text-orange-400 transition"
           >
             About
-          </Link>
+          </Link> */}
           <Link 
             to="/contact" 
             onClick={() => setIsOpen(false)} 
@@ -94,7 +94,7 @@ const Navbar = () => {
 
         {/* Right-side links */}
         <a href="#" className="uppercase text-base whitespace-nowrap">Gallery</a>
-        <a href="#" className="uppercase text-base whitespace-nowrap">About</a>
+        {/* <a href="#" className="uppercase text-base whitespace-nowrap">About</a> */}
         <a href="#" className="uppercase text-base whitespace-nowrap">Contact</a>
       </div>
     </nav>

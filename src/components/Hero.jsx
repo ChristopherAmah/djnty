@@ -7,13 +7,14 @@ import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
-    <section className="relative h-screen w-full overflow-hidden font-sans">
+    <section>
+      <section className="relative h-screen w-full overflow-hidden font-sans p-8 rounded-t-[30px] md:rounded-t-[100px] md:rounded-b-0">
       {/* Background images as grid */}
       <div className="absolute inset-0 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-        <img src={urban2set} alt="Urban 1" className="w-full h-full object-cover" />
-        <img src={urbanneto} alt="Urban 2" className="w-full h-full object-cover hidden sm:block" />
-        <img src={praying} alt="Urban 3" className="w-full h-full object-cover hidden lg:block" />
-        <img src={urbanset} alt="Urban 4" className="w-full h-full object-cover hidden xl:block" />
+        <img src={urban2set} alt="Urban 1" className="w-full h-full object-cover animate-scaleIn" />
+        <img src={urbanneto} alt="Urban 2" className="w-full h-full object-cover hidden sm:block animate-scaleIn" />
+        <img src={praying} alt="Urban 3" className="w-full h-full object-cover hidden lg:block animate-scaleIn" />
+        <img src={urbanset} alt="Urban 4" className="w-full h-full object-cover hidden xl:block animate-scaleIn" />
       </div>
 
       {/* Softer Overlay */}
@@ -23,8 +24,8 @@ const Hero = () => {
       <div className="relative z-10 h-full flex flex-col justify-center items-center text-center px-6 space-y-8 animate-fadeIn">
         
         {/* Tagline in its own contrast box */}
-        <div className="px-6 py-4 rounded-xl shadow-lg backdrop-blur-sm">
-          <h1 className="text-3xl md:text-4xl lg:text-8xl font-extrabold text-white tracking-wide">
+        <div className="px-6 py-4 rounded-xl shadow-lg backdrop-blur-sm animate-slideUp">
+          <h1 className="text-4xl md:text-4xl lg:text-8xl font-extrabold text-white tracking-wide">
             DJ NTY - <span className="text-orange-400">URBAN FUSION</span>
           </h1>
           <p className="text-gray-100 mt-5 text-sm md:text-lg text-center">
@@ -51,6 +52,7 @@ const Hero = () => {
           </Link> */}
         </div>
       </div>
+    </section>
     </section>
   );
 };

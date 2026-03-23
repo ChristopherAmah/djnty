@@ -22,9 +22,9 @@ const EventSection = () => {
   );
 
   return (
-    <section className="bg-black text-white py-16 px-6">
+    <section className="bg-black text-white py-16 px-6 animate-fadeIn">
       <div className="container mx-auto">
-        <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12 text-orange-400">
+        <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12 text-orange-400 animate-slideUp">
           Events
         </h2>
 
@@ -36,7 +36,7 @@ const EventSection = () => {
               {upcomingEvents.map((event) => (
                 <div
                   key={event.id}
-                  className="relative rounded-lg overflow-hidden shadow-lg hover:scale-105 transition-transform"
+                  className="relative rounded-lg overflow-hidden shadow-lg hover:scale-105 transition-transform animate-scaleIn"
                 >
                   {/* Full image */}
                   <img

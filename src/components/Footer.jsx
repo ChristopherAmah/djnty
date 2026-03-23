@@ -31,10 +31,10 @@ const Footer = () => {
   return (
     <div className="flex flex-col justify-between">
       {/* Footer */}
-      <footer className="relative bg-black text-white py-12 px-6 font-sans overflow-hidden">
+      <footer className="relative bg-[#3d3b3b] text-white py-12 px-6 font-sans overflow-hidden animate-fadeIn">
         {/* Soft glowing background */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black via-gray-900 to-black" />
-        <div className="absolute -top-40 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-orange-400/10 rounded-full blur-[150px]" />
+        {/* <div className="absolute inset-0 bg-gradient-to-t from-black via-gray-900 to-black" />
+        <div className="absolute -top-40 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-orange-400/10 rounded-full blur-[150px]" /> */}
 
         {/* Content */}
         <div className="relative container mx-auto flex flex-col items-center space-y-8 z-10">

@@ -2,10 +2,7 @@ import React, { useState } from "react";
 
 const MusicBanner = () => {
   const [isOpen, setIsOpen] = useState(false); // mobile popup state
-  const [isVisible, setIsVisible] = useState(true); // desktop visibility
   const [activeTab, setActiveTab] = useState("spotify"); // active player
-
-  if (!isVisible) return null;
 
   const renderPlayer = () => {
     if (activeTab === "spotify") {
@@ -51,7 +48,7 @@ const MusicBanner = () => {
           onClick={() => setIsOpen(true)}
           className="flex items-center gap-2 bg-red-500 text-white text-sm font-bold px-4 py-2 rounded-full shadow-lg hover:bg-red-600 transition animate-pulse"
         >
-          🎵 NEW MUSIC
+           NEW MUSIC
         </button>
       </div>
 
@@ -94,51 +91,6 @@ const MusicBanner = () => {
           <div className="w-11/12 max-w-md">{renderPlayer()}</div>
         </div>
       )}
-
-      {/* Desktop floating card */}
-      <div
-        className="
-          hidden md:block
-          fixed bottom-6 right-6 z-50
-          bg-black text-white rounded-2xl shadow-xl p-4
-          w-96 animate-slide-up
-        "
-      >
-        {/* Close Button */}
-        <button
-          onClick={() => setIsVisible(false)}
-          className="absolute top-2 right-2 text-gray-400 hover:text-white transition"
-        >
-          ✖
-        </button>
-
-        {/* Tabs */}
-        <div className="flex gap-3 mb-3">
-          <button
-            onClick={() => setActiveTab("spotify")}
-            className={`px-3 py-1 rounded-full text-xs font-semibold transition ${
-              activeTab === "spotify"
-                ? "bg-green-500 text-white"
-                : "bg-gray-800 text-gray-300 hover:bg-gray-700"
-            }`}
-          >
-            Spotify
-          </button>
-          <button
-            onClick={() => setActiveTab("apple")}
-            className={`px-3 py-1 rounded-full text-xs font-semibold transition ${
-              activeTab === "apple"
-                ? "bg-pink-500 text-white"
-                : "bg-gray-800 text-gray-300 hover:bg-gray-700"
-            }`}
-          >
-            Apple Music
-          </button>
-        </div>
-
-        {/* Player */}
-        {renderPlayer()}
-      </div>
     </>
   );
 };

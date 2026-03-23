@@ -11,7 +11,7 @@ function App() {
 
   return (
     <>
-       <div>
+       <div className="stone-background">
       <Topbar />
       <Navbar />
       <Routes>

@@ -7,6 +7,7 @@ import Topbar from './components/Topbar'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import Gallery from './components/Gallery'
+import PWAInstallPrompt from './components/PWAInstallPrompt'
 
 function App() {
   const location = useLocation();
@@ -35,6 +36,7 @@ function App() {
         <Route path='/gallery' element={<Gallery />} />
       </Routes>
       <Footer />
+      <PWAInstallPrompt />
     </div>
     </>
   )

@@ -1,6 +1,19 @@
 @import "tailwindcss";
 
 #root{
-  font-family: 'Satoshi', 'Plus Jakarta Sans', 'DM Sans', sans-serif, 'Blanka Regular';
+  font-family: 'Inter', 'Poppins', sans-serif;
+}
+
+/* Custom font classes for different use cases */
+.font-display {
+  font-family: 'Bebas Neue', 'Oswald', sans-serif;
+}
+
+.font-heading {
+  font-family: 'Oswald', 'Bebas Neue', sans-serif;
+}
+
+.font-accent {
+  font-family: 'Blaka', 'Blanka Regular', cursive;
 }
 

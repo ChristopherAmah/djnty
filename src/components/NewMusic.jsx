@@ -19,7 +19,7 @@ const NewMusic = () => {
   return (
     <section className="">
       <div
-      className="relative bg-black text-white py-20 px-6 overflow-hidden animate-fadeIn"
+      className="relative bg-black text-white py-20 px-6 overflow-hidden rounded-b-3xl md:rounded-b-[100px] animate-fadeIn"
       id="music"
     >
       {/* Background glow */}
@@ -29,7 +29,7 @@ const NewMusic = () => {
 
       <div className="container mx-auto relative z-10">
         {/* Section title */}
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-sans font-bold tracking-widest uppercase mb-16 text-center text-orange-400 animate-slideUp">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading font-bold tracking-widest uppercase mb-16 text-center text-orange-400 animate-slideUp">
           Music
         </h2>
 
@@ -84,8 +84,8 @@ const NewMusic = () => {
           </div>
         </div>
 
-        {/* Glass bar for mobile (icons only) */}
-        <div className="mt-10 sm:hidden flex justify-center">
+        
+        <div className="mt-10 flex justify-center">
           <div className="flex items-center gap-8 px-6 py-3 bg-black/40 backdrop-blur-md rounded-full border border-white/20">
             <a
               href={newMusicData.links.spotify}

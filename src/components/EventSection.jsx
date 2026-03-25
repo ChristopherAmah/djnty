@@ -1,15 +1,32 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
+import urban1set from "../assets/fusion2.jpg";
+import urban2set from "../assets/fusion1.jpg";
+import urban3set from "../assets/u7.jpeg";
 
 const EventSection = () => {
-  const [events, setEvents] = useState([]);
-
-  useEffect(() => {
-    // Load JSON data (local file in public/data/events.json)
-    fetch("/data/events.json")
-      .then((res) => res.json())
-      .then((data) => setEvents(data))
-      .catch((err) => console.error("Error loading events:", err));
-  }, []);
+  const events = [
+    {
+      id: 1,
+      title: "Urban Fusion",
+      date: "2025-12-23",
+      image: urban3set,
+      // ticketLink: "https://myevents.com/summer-party"
+    },
+    {
+      id: 2,
+      title: "Urban Fusion",
+      date: "2025-08-29",
+      image: urban1set,
+      // ticketLink: "https://myevents.com/summer-party"
+    },
+    {
+      id: 3,
+      title: "Urban Fusion",
+      date: "2025-06-28",
+      image: urban2set,
+      // ticketLink: "https://myevents.com/beach-festival"
+    },
+  ];
 
   const today = new Date().setHours(0, 0, 0, 0);
 

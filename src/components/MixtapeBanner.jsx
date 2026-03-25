@@ -4,7 +4,7 @@ import fivemix from '../assets/fivemix.avif';
 const EPBanner = () => {
   return (
     <section className=''>
-      <div className="relative bg-gradient-to-b from-black via-gray-900 to-black text-white py-16 px-6 overflow-hidden rounded-b-3xl md:rounded-b-[100px] animate-fadeIn">
+      <div className="relative bg-gradient-to-b from-black via-gray-900 to-black text-white py-16 px-6 overflow-hidden rounded-3xl md:rounded-[100px] animate-fadeIn">
       {/* Subtle background texture */}
       <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-10"></div>
 

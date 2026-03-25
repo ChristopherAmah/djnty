@@ -3,10 +3,16 @@ import React, { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa"; // npm install react-icons
 import { HiMenuAlt2 } from "react-icons/hi";
 import logo from "../assets/logobg.png";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const navigate = useNavigate();
+
+  const handleNavigateToSection = (sectionId) => {
+    setIsOpen(false);
+    navigate(`/#${sectionId}`);
+  };
 
   return (
     <nav className="bg-[#3d3b3b] text-white p-4">
@@ -39,13 +45,19 @@ const Navbar = () => {
 
         {/* Links */}
         <div className="flex flex-col space-y-8 text-sm font-semibold">
-          <a 
-            href="#music" 
+          <Link 
+            to="/" 
             onClick={() => setIsOpen(false)} 
             className="hover:text-orange-400 transition"
           >
+            HOME
+          </Link>
+          <button 
+            onClick={() => handleNavigateToSection("music")} 
+            className="hover:text-orange-400 transition text-left"
+          >
             MUSIC
-          </a>
+          </button>
           <a href="https://nevtooyoung.com" onClick={() => setIsOpen(false)}>SHOP</a>
           <Link 
             to="/events" 
@@ -68,20 +80,19 @@ const Navbar = () => {
           >
             About
           </Link> */}
-          <a 
-            href="#contact" 
-            onClick={() => setIsOpen(false)} 
-            className="hover:text-orange-400 transition"
+          <button 
+            onClick={() => handleNavigateToSection("contact")} 
+            className="hover:text-orange-400 transition text-left"
           >
             CONTACT
-          </a>
+          </button>
         </div>
       </div>
 
       {/* Desktop Layout */}
       <div className="hidden md:flex justify-center items-center flex-wrap md:flex-nowrap space-x-8">
         {/* Left-side links */}
-        <a href="#music" className="text-sm whitespace-nowrap">MUSIC</a>
+        <button onClick={() => handleNavigateToSection("music")} className="text-sm whitespace-nowrap hover:text-orange-400 transition bg-transparent border-none cursor-pointer">MUSIC</button>
         <a href="https://nevtooyoung.com" className="text-sm whitespace-nowrap">SHOP</a>
         <Link to="/events" className="text-sm whitespace-nowrap">EVENTS</Link>
 
@@ -95,7 +106,7 @@ const Navbar = () => {
         {/* Right-side links */}
         <Link to="/gallery" className="text-sm whitespace-nowrap">GALLERY</Link>
         {/* <a href="#" className="uppercase text-base whitespace-nowrap">About</a> */}
-        <a href="#contact" className="text-sm whitespace-nowrap">CONTACT</a>
+        <button onClick={() => handleNavigateToSection("contact")} className="text-sm whitespace-nowrap hover:text-orange-400 transition bg-transparent border-none cursor-pointer">CONTACT</button>
       </div>
     </nav>
   );

@@ -3,6 +3,7 @@ import urbanneto from "../assets/urbanneto.jpg";
 import urban2set from "../assets/urban2set.jpg"; 
 import praying from "../assets/praying.jpg"; 
 import urbanset from "../assets/urbanset.jpg"; 
+import logo from "../assets/herobg.png";
 import { Link } from "react-router-dom";
 
 const Hero = () => {
@@ -25,10 +26,10 @@ const Hero = () => {
         
         {/* Tagline in its own contrast box */}
         <div className="px-6 py-4 rounded-xl shadow-lg backdrop-blur-sm animate-slideUp">
-          <h1 className="text-4xl md:text-4xl lg:text-8xl font-extrabold text-white tracking-wide">
-            DJ NTY - <span className="text-orange-400">URBAN FUSION</span>
+          <h1 className="text-4xl md:text-4xl lg:text-8xl font-display font-extrabold text-white tracking-wide">
+            <img src={logo} alt="DJ NTY" className="w-full h-20 sm:h-40 object-cover inline-block mr-4" /> <span className="text-orange-400">URBAN FUSION</span>
           </h1>
-          <p className="text-gray-100 mt-5 text-sm md:text-lg text-center">
+          <p className="text-gray-100 mt-5 text-sm md:text-lg text-center font-light">
             Discover mixtapes, music and events by DJ NTY
           </p>
         </div>

@@ -4,7 +4,7 @@ import u2 from "../assets/u2.jpeg";
 import u3 from "../assets/u3.jpeg";
 import u4 from "../assets/u4.jpeg";
 import u5 from "../assets/u5.jpeg";
-import u7 from "../assets/u7.jpeg";
+// import u7 from "../assets/u7.jpeg";
 import u8 from "../assets/u8.jpeg";
 import u9 from "../assets/u9.jpeg";
 import u10 from "../assets/u10.jpeg";
@@ -21,7 +21,7 @@ const galleryImages = [
   { id: 3, src: u3, alt: "Gallery Image 3" },
   { id: 4, src: u4, alt: "Gallery Image 4" },
   { id: 5, src: u5, alt: "Gallery Image 5" },
-  { id: 6, src: u7, alt: "Gallery Image 6" },
+//   { id: 6, src: u7, alt: "Gallery Image 6" },
   { id: 7, src: u8, alt: "Gallery Image 7" },
   { id: 8, src: u9, alt: "Gallery Image 8" },
   { id: 9, src: u10, alt: "Gallery Image 9" },
